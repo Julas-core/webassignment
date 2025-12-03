@@ -12,47 +12,64 @@
 <body>
     <header>
         <nav>
-            <a href="index.html" class="logo" aria-label="Portfolio">Portfolio</a>
-            <a href="index.html" class="active">Home</a>
-            <a href="sklls.html">Skills</a>
-            <a href="Education.html">Achievments</a>
-            <a href="Expericnce.html">Experience</a>
-            <a href="Contact.html">Contact</a>
+            <div class="nav-container">
+                <a href="index.html" class="logo" aria-label="Portfolio">Portfolio</a>
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="sklls.html" class="nav-link">Skills</a>
+                    <a href="Education.html" class="nav-link">Achievements</a>
+                    <a href="Expericnce.html" class="nav-link">Experience</a>
+                    <a href="Contact.html" class="nav-link">Contact</a>
+                </div>
+            </div>
         </nav>
     </header>
-    <section id="home" class="home">
-        <div class="home-text">
-            <h1>
-                Hello <br>my name is <span>Julas</span>
-            </h1>
-            <h3 class="typing-text">I'm a Front-end Developer/Graphics-Designer</h3>
-            <p>I'm a passionate Front-end Developer/ Graphic-Designer<br> making every type of design/look you can think of <br> continually honning my skills thourgh personal projects or creative explorations. <br>I thrive on transfoming ideas into impactful visual strories<br> you can follow me on my socails below and stay up to date.
-            </p>
-        </div>
-        <div class="home-bottom">
-            <div class="home-img">
-                <img src="./imges/Profile_pic1.png" alt="profile-iamge">
-            </div>
-            <div class="home-actions">
-                <div class="social-icon">
-                    <a href="https://github.com/julas-core"><img class="fa-brands" src="./imges/githubicon.png"></a>
-                    <a href="#"><img class="fa-brands " src="./imges/linkedinicon.png"></a>
-                    <a href="#"><img src="./imges/telegramicon.png" class="fa-brands"></a>
+
+    <main>
+        <section id="home" class="home-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>
+                            <br>Hello <br>my name is <span>Julas</span>
+                        </h1>
+                        <h3 class="typing-text">I'm a Front-end Developer/Graphics-Designer</h3>
+                        <p>I'm a passionate Front-end Developer/ Graphic-Designer<br> making every type of design/look you can think of <br> continually honning my skills thourgh personal projects or creative explorations. <br>I thrive on transfoming ideas into impactful visual strories<br> you can follow me on my socails below and stay up to date.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#" class="btn">Hire me</a>
+                            <div class="social-icons">
+                                <a href="https://github.com/julas-core" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="image-placeholder">
+                            <img src="./imges/Profile_pic1.png" alt="">
+                        </div>
+                    </div>
                 </div>
-                <a href="#" class="btn">Hire me</a>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
+
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-info">
-                <span class="info-label">Name:</span> <span class="info-value">Julas Mohammednur</span>
-            </div>
-            <div class="footer-info">
-                <span class="info-label">ID:</span> <span class="info-value">UGR/189777/16</span>
-            </div>
-            <div class="footer-info">
-                <span class="info-label">Department:</span> <span class="info-value">Computer Science</span>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <span class="info-label">Name:</span> <strong class="info-value">Julas Mohammednur</strong>
+                </div>
+                <div class="footer-info">
+                    <span class="info-label">ID:</span> <strong class="info-value">UGR/189777/16</strong>
+                </div>
+                <div class="footer-info">
+                    <span class="info-label">Department:</span> <strong class="info-value">Computer Science</strong>
+                </div>
+                <div class="footer-info">
+                    <span class="info-label">Section:</span> <strong class="info-value">1</strong>
+                </div>
             </div>
         </div>
     </footer>
