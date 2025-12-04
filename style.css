@@ -19,12 +19,12 @@
 
 :root {
     --bg-image: url('imges/74c6298c-593f-446f-a9a4-e026e3023288.png');
-    --accent: #f2c46b;
-    /* warm gold */
+    --accent: #4a90e2;
+    /* blue accent */
     --text: #f5f5f0;
     /* light text */
     --subtle: rgba(245, 245, 240, 0.9);
-    --panel: rgba(8, 8, 8, 0.45);
+    --panel: rgb(8, 8, 8);
     --container-padding: 9%;
 }
 
@@ -117,7 +117,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 15rem;
+    padding-top: 8rem;
 }
 
 .hero-content {
@@ -138,7 +138,7 @@ section {
 
 /* Desktop: container for image and actions stacked on right */
 .hero-right {
-    margin-top: 50px;
+    margin-top: 12rem;
     grid-column: 2;
     width: 300px;
     height: auto;
@@ -156,10 +156,54 @@ section {
     align-items: center;
 }
 
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted rgba(224, 220, 220, 0.363); /* Add dots under the hoverable text */
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+}
+
+/* Tooltip text */
+.tooltiptext {
+  visibility: hidden; /* Hidden by default */
+  width: 130px;
+  font-size: smaller;
+  background-color: #e3e3e45e;
+  color: #041C61;
+  text-align: center;
+  padding: 8px 5px;
+  border-radius: 6px;
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; /* Ensure tooltip is displayed above content */
+}
+
+/* Tooltip arrow */
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #e3e3e45e transparent transparent transparent;
+}
+
+/* Show the tooltip text on hover */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 /* Desktop: actions below image within right column */
 .hero-actions {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 1.5rem;
 }
@@ -178,6 +222,24 @@ section {
 }
 
 .hero-text h1 span {
+    color: #041D62; /* Dark blue */
+    font-family: 'Real Brush', 'Poppins', cursive;
+    font-weight: 400;
+    text-shadow:
+        0 0 5px rgb(255, 255, 255), /* Initial glow */
+        0 0 30px rgb(255, 255, 255), /* Enhanced glow */
+        0 0 15px rgb(255, 255, 255), /* Additional glow layer */
+        -1px -2px 0 rgba(255, 255, 255, 0.76),
+        2px -2px 0 rgba(255, 255, 255, 0.815),
+        -2px 2px 0 rgba(235, 227, 227, 0.849),
+        2px 2px 0 rgba(255, 255, 255, 0.76); /* White stroke */
+    display: inline-block;
+    transform: rotate(-3deg); /* Slight rotation for more script-like appearance */
+    position: relative;
+    top: -5px; /* Adjust positioning */
+}
+
+.hero-text h3 span {
     color: #041D62; /* Dark blue */
     font-family: 'Real Brush', 'Poppins', cursive;
     font-weight: 400;
@@ -218,8 +280,8 @@ section {
 .btn {
     display: inline-block;
     padding: 1rem 2rem;
-    background: linear-gradient(90deg, var(--accent), #b78a3a);
-    color: #0b0b0b;
+    background: linear-gradient(90deg, var(--accent), #357abd);
+    color: #f5f5f0;
     border-radius: 0.8rem;
     cursor: pointer;
     text-decoration: none;
@@ -231,7 +293,7 @@ section {
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(242, 196, 107, 0.4);
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
 }
 
 .social-icons {
@@ -255,7 +317,7 @@ section {
 
 .social-icons a:hover {
     background: var(--accent);
-    color: #0b0b0b;
+    color: #f5f5f0;
     transform: translateY(-3px);
 }
 
@@ -317,6 +379,26 @@ section {
 }
 
 /* ========== SKILLS ========== */
+.section-title h1 span,
+.section-title span {
+    color: #041D62; /* Dark blue */
+    font-family: 'Real Brush', 'Poppins', cursive;
+    font-weight: 400;
+    text-shadow:
+        0 0 5px rgb(255, 255, 255), /* Initial glow */
+        0 0 30px rgb(255, 255, 255), /* Enhanced glow */
+        0 0 15px rgb(255, 255, 255), /* Additional glow layer */
+        -1px -2px 0 rgba(255, 255, 255, 0.76),
+        2px -2px 0 rgba(255, 255, 255, 0.815),
+        -2px 2px 0 rgba(235, 227, 227, 0.849),
+        2px 2px 0 rgba(255, 255, 255, 0.76); /* White stroke */
+    display: inline-block;
+    transform: rotate(-3deg); /* Slight rotation for more script-like appearance */
+    position: relative;
+    top: -5px; /* Adjust positioning */
+    font-size: 1.8em; /* Make the first letter significantly larger */
+    vertical-align: middle; /* Better alignment with the rest of the text */
+}
 .skill-list {
     display: flex;
     flex-wrap: wrap;
@@ -444,7 +526,7 @@ section {
 }
 
 #education .edu-item h3 {
-    color: #b78a3a;
+    color: #041C61;
     font-size: clamp(0.8rem, 2.5vw, 2.4rem);
     font-weight: 600;
     margin-bottom: 0.25rem;
